@@ -79,7 +79,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
 
   downloadImage(img: ImageDetail) {
     const imgUrl = img.download_url;
-    this.apiService.getRestDownloadFile(imgUrl).subscribe((res: any) => {
+    this.downloadImgSub = this.apiService.getRestDownloadFile(imgUrl).subscribe((res: any) => {
       const file = new Blob([res], { type: res.type });
       const blob = window.URL.createObjectURL(file);
       const link = document.createElement('a');
