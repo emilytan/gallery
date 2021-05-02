@@ -1,0 +1,28 @@
+<h2 class="header">Image Detail</h2>
+<h4 *ngIf="error" class="errorMsg">Fail to retreive image details</h4>
+
+<div *ngIf="loading" class="loadingCenter">
+    <div class="loader"></div>
+</div>
+
+<ul class="breadcrumb">
+    <li><a href="/home">Home</a></li>
+    <li>Details</li>
+  </ul>
+
+<div *ngIf="!loading">
+    <div class="row">
+        <div class="column">
+            <h4 *ngIf="imgLoading" class="loadingMsg">Loading images</h4>
+            <img src="{{imageDetail.download_url}}" class="imageSize" id="img-id"
+                (load)='onLoad($event)'>
+        </div>
+        <div class="column leftColumn">
+            <p>Author: {{imageDetail.author}}</p>
+            <p>Width: {{imageDetail.width}}</p>
+            <p>Height: {{imageDetail.height}}</p>
+
+            <p><button class="button" (click)="downloadImage(imageDetail)">Download Image</button></p>
+        </div>
+    </div>
+</div>

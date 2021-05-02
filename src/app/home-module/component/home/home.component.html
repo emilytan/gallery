@@ -1,0 +1,21 @@
+<h1 class="header">Discover Images</h1>
+<h4 *ngIf="error" class="errorMsg">Fail to retreive a list of images</h4>
+
+<div class="pagination">
+  <a>&laquo;</a>
+  <a [ngClass]="{ active: currentPage === 1 }" (click)="retrieveImage(1)">1</a>
+  <a [ngClass]="{ active: currentPage === 2 }" (click)="retrieveImage(2)">2</a>
+  <a [ngClass]="{ active: currentPage === 3 }" (click)="retrieveImage(3)">3</a>
+  <a [ngClass]="{ active: currentPage === 4 }" (click)="retrieveImage(4)">4</a>
+  <a>&raquo;</a>
+</div>
+
+<div *ngIf="loading" class="loadingCenter">
+  <div class="loader"></div>
+</div>
+<div class="row">
+  <div class="column" *ngFor="let image of images" loading="lazy">
+    <img class="imageSize" src={{image.download_url}} (click)="imgDetails(image)" title="Click to see details"
+      load="lazy">
+  </div>
+</div>

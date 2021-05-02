@@ -1,0 +1,27 @@
+.header {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: #018f81;
+}
+
+.errorMsg {
+  color: lightcoral;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.column {
+  float: left;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.loadingCenter {
+  position: relative;
+  left: 45%;
+}

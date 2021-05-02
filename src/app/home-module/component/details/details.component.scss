@@ -1,0 +1,72 @@
+@import "../../../stylesheets/common.scss";
+@import "../../../stylesheets/loader.scss";
+@import "../../../stylesheets/pagination.scss";
+
+.imageSize {
+  width: 700px;
+  height: 600px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 2em;
+}
+
+.column {
+  padding: 10px;
+}
+    
+.leftColumn {
+  padding-left: 5rem;
+}
+
+.button {
+  width: 200px;
+  font-size: 16px;
+  color: #fff !important;
+  background-color: #009688 !important;
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.loadingMsg {
+  color: lightblue;
+  font-weight: 150;
+  font-style: italic;
+}
+
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #02b19f;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #007a6e;
+  text-decoration: underline;
+}
