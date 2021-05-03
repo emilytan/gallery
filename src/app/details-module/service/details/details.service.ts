@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ImageDetail } from '../../model/detail.model';
+import { ImageDetail } from '../../../home-module/model/detail.model';
 import { catchError, map } from 'rxjs/operators';
 import { throwError, Observable, Observer } from 'rxjs';
 import { ApiService } from 'src/app/api/api.service';

@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ImageDetail } from '../../model/detail.model';
+import { ImageDetail } from '../../../home-module/model/detail.model';
 import { DetailsService } from '../../service/details/details.service';
 import { saveAs } from 'file-saver';
 import { ApiService } from 'src/app/api/api.service';
