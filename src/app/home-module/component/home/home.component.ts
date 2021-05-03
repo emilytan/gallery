@@ -48,6 +48,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   imgDetails(image) {
+    sessionStorage.setItem('id', image.id);
     this.router.navigate(['/detail/' + image.id]);
   }
 }

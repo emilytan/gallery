@@ -11,26 +11,18 @@ import {
 
 @Injectable()
 export class RouteGuard implements CanActivate {
-  constructor(private router: Router) {
-  }
+  constructor(private router: Router) {}
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
-  ):
-    | boolean
-    | UrlTree {
-    console.log(route.paramMap.get('id'));
-
-    
-    if (route.paramMap.get('id')){
-        console.log('enter')
-        return true;
+  ): boolean | UrlTree {
+    let paramId = route.paramMap.get('id');
+    let realId = sessionStorage.getItem('id');
+    if (paramId === realId) {
+      return true;
     } else {
-        console.log('ente false')
-
-        this.router.navigate(['/home']);
+      this.router.navigate(['/home']);
     }
-
     return true;
   }
 }
