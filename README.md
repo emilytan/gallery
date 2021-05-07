@@ -1,5 +1,8 @@
 # DiscoverImages
-A simple gallery of images, select the image to see details.
+A simple gallery of images build in Angular 11.
+Select the image to see more details.
+Utilizes Angular Lazy Loading for routing.
+Implemented Route Guard to tell the router whether or not it should allow navigation to a requested route.
 
 ## Author
 Emily Tan
